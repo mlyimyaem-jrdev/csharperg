@@ -1,25 +1,29 @@
 namespace ConsoleApp1;
 
-public class JaggedArrayLesson
+public class LoopsLesson
 {
     static void Main(string[] args)
     {
-        int[][] jagged =
+        // while condition
+        bool isFound = false;
+        int value = 0;
+        while (isFound != true)
         {
-            new int[]{ 4,5}, //0
-            new int[]{ 6,7,8}, //1
-            new int[]{ 9,10,11,12}, //2
-            new int[]{ 13,14,15,16,17}, //3
-        };
-        System.Console.WriteLine(jagged[2][2]);
-        for (int i=0;i<jagged.Length;i++)
-        {
-            for (int j = 0; j < jagged[i].Length; j++)
+            System.Console.WriteLine(value);
+            if (value == 99)
             {
-                System.Console.Write(jagged[i][j]+", ");
+                isFound = true;
             }
-            System.Console.WriteLine();
-            
+            value = value + 3;
         }
+        System.Console.WriteLine("end of while loop");
+        //do while loop
+        int count = 1;
+        do
+        {
+            System.Console.WriteLine("Hello World");
+            count++;
+        } while (count <= 5);
+        System.Console.WriteLine("end of do while loop");
     }
 }
